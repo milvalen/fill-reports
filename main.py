@@ -5,13 +5,13 @@ import os
 
 def read_ods(file_path):
     doc = ezodf.opendoc(file_path)
-    sheet = doc.sheets[0]  # Используем первый лист в документе
+    sheet = doc.sheets[0]
 
     placeholders = {}
     for row in sheet.rows():
         if len(row) >= 2:
-            key = str(row[0].value).strip()  # Плейсхолдер (первый столбец)
-            value = str(row[1].value).strip()  # Значение (второй столбец)
+            key = str(row[0].value).strip()
+            value = str(row[1].value).strip()
             placeholders[key] = value
     
     return placeholders
