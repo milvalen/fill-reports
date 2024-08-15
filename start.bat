@@ -1,10 +1,6 @@
 @echo off
 cd /d "%~dp0"
 
-call .venv\Scripts\activate
-
-python main.py
-
-deactivate
+python fill_template.py
 
 pause
